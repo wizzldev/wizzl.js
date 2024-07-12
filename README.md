@@ -22,7 +22,7 @@ Let's create our client.
 
 ```typescript
 const client = new Client() // Optionally, you can set the protocol and domain as an object.
-// The default configuration is: { protocol: 'https', domain: 'api.wizzl.co' } 
+// The default configuration is: { secureProtocol: true, domain: 'api.wizzl.co' } 
 ```
 
 ### There are some event methods for our bot.

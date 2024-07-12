@@ -3,6 +3,8 @@ import {RawMessageData} from "../ctx/types/types.js";
 
 /**
  * Gets the message by chat id and message id
+ * @param {number} chatID
+ * @param {number} messageID
  * @returns {Promise<RawMessageData|null>} The raw message data or null
  */
 export const getMessage = async (chatID: number, messageID: number): Promise<RawMessageData | null> => {

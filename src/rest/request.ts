@@ -1,4 +1,5 @@
 import axios, {InternalAxiosRequestConfig} from 'axios'
+import { global } from "globals";
 
 const instance = axios.create({
     withCredentials: true
@@ -7,9 +8,9 @@ const instance = axios.create({
 instance.interceptors.request.use(
     async (config: InternalAxiosRequestConfig) => {
         config.headers['X-Frontend-Client'] = 'Bot/SDK/Node.js'
-        config.headers['Authorization'] = 'Bearer ' + (global as any).token
+        config.headers['Authorization'] = 'Bearer ' + global.token
         config.headers['Content-Type'] = 'application/json'
-        config.baseURL = (global as any).server
+        config.baseURL = global.server
         return config
     },
     (error) => {
