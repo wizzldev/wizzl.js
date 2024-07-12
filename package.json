@@ -1,0 +1,41 @@
+{
+  "name": "wizzljs",
+  "version": "1.0.0-alpha",
+  "description": "A Node.js API wrapper to develop BOTs for Wizzl",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "dev": "npx tsx src/client/client.ts",
+    "lint": "eslint . --ext .ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wizzldev/wizzl.js.git"
+  },
+  "keywords": [
+    "Wizzl",
+    "Wizzl.js"
+  ],
+  "author": "Wizzl Team",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wizzldev/wizzl.js/issues"
+  },
+  "homepage": "https://github.com/wizzldev/wizzl.js#readme",
+  "devDependencies": {
+    "@types/node": "^20.14.10",
+    "@types/ws": "^8.5.10",
+    "@typescript-eslint/eslint-plugin": "^7.16.0",
+    "@typescript-eslint/parser": "^7.16.0",
+    "eslint": "^8.57.0",
+    "typedoc": "^0.26.4",
+    "typescript": "^5.5.3"
+  },
+  "dependencies": {
+    "axios": "^1.7.2",
+    "ws": "^8.18.0"
+  }
+}
