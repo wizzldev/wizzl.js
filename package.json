@@ -1,6 +1,6 @@
 {
   "name": "wizzljs",
-  "version": "1.0.0-alpha",
+  "version": "1.0.0",
   "description": "A Node.js API wrapper to develop BOTs for Wizzl",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
