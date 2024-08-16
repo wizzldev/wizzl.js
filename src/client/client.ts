@@ -1,6 +1,5 @@
 import Base from "./base.js"
 import {Config} from "./config.js";
-import { global } from "globals";
 
 /* Class representing a Wizzl Bot API Client */
 export class Client extends Base {
@@ -15,7 +14,7 @@ export class Client extends Base {
         super();
         const domain = config.domain || 'api.wizzl.co';
         const protocol = config.secureProtocol || true;
-        global.server = `${protocol ? 'https' : 'http'}://${domain}`
-        global.ws_server = `${protocol ? 'wss' : 'ws'}://${domain}/ws`
+        (global as any).server = `${protocol ? 'https' : 'http'}://${domain}`;
+        (global as any).ws_server = `${protocol ? 'wss' : 'ws'}://${domain}/ws`
     }
 }

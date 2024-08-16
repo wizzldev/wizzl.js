@@ -9,13 +9,13 @@ It's designed to be really easy for any developer to use.
 ### First, you need to install our codebase and set up a new client:
 
 ```shell
-npm install wizzljs
+npm install wizzl.js
 ```
 
 Next, you need to import the Wizzl bot client class. This allows you to perform any actions without writing API requests.
 
 ```typescript
-import { Client } from 'wizzljs'
+import { Client } from 'wizzl.js'
 ```
 
 Let's create our client.
@@ -43,7 +43,7 @@ It's more than you might think, as everything you need to develop a bot is in th
 
 Here's a small example of how it works:
 ```typescript
-import { Ctx } from "wizzljs";
+import { Ctx } from "wizzl.js";
 
 client.onMessage(async (ctx: Ctx) => {
     // If you have a prefix, you can check if the message starts

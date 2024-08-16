@@ -3,7 +3,6 @@ import {checkBotToken} from "../rest/checkBotToken.js"
 import {Ctx} from "../ctx/ctx.js"
 import {MessageEventType} from "../ctx/types/enums.js"
 import {ReactionCtx} from "../ctx/reaction_ctx.js";
-import { global } from "globals";
 
 export type MessageHandler = (ctx: Ctx) => void
 export type ReactionHandler = (reaction: ReactionCtx) => void
@@ -59,7 +58,7 @@ export default class Base {
         (global as any).token = token
         const ok = await checkBotToken()
         if(!ok) throw new Error(`Invalid Authentication Token`)
-        const ws = new WS(`${global.ws_server}?authorization=${encodeURIComponent(token)}`)
+        const ws = new WS(`${(global as any).ws_server}?authorization=${encodeURIComponent(token)}`)
         await ws.connect(this._onOpen, this._onMessage, this._onReaction, this._onError)
         this.ws = ws
     }
