@@ -13,8 +13,9 @@ export class Client extends Base {
     public constructor(config: Config = {}) {
         super();
         const domain = config.domain || 'api.wizzl.app';
+        const gateway = config.gateway || 'gateway.wizzl.app';
         const protocol = config.secureProtocol === undefined ? true : config.secureProtocol;
         (global as any).server = `${protocol ? 'https' : 'http'}://${domain}`;
-        (global as any).ws_server = `${protocol ? 'wss' : 'ws'}://${domain}/ws`
+        (global as any).ws_server = `${protocol ? 'wss' : 'ws'}://${gateway}`
     }
 }
